@@ -130,7 +130,7 @@ function parseData(response) {
         .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
-        .style("background-color", "white")
+        .style("background-color", "rgb(186,191,207)")
         .style("border", "solid")
         .style("border-width", "1px")
         .style("border-radius", "5px")
@@ -138,13 +138,11 @@ function parseData(response) {
     
 
     var mouseover = function(d) {
-        console.log(tooltip)
         tooltip
             .style("opacity", 1)
         }
         
     var mousemove = function(event,d) {
-        console.log(d);
         tooltip
             .html(function() {
                 if (d.Doping.length == 0) {
@@ -159,7 +157,7 @@ function parseData(response) {
             .style("top", event.clientY + 15 + "px")
         }
         
-        
+
     var mouseleave = function(d) {
         tooltip
             .transition()
